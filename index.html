@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>React Basics</title>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script
       crossorigin
       src="https://unpkg.com/react@17/umd/react.development.js"
@@ -16,6 +17,19 @@
   </head>
   <body>
     <div id="app"></div>
-    <h1>Hello World!</h1>
+    <script type="text/babel">
+      class App extends React.Component {
+        render() {
+          return (
+            <div className="app-content">
+              <h1>Hello, Shahadat!</h1>
+              <p>Random number: {Math.random() * 100}</p>
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById("app"));
+    </script>
   </body>
 </html>
