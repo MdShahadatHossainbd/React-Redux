@@ -2,12 +2,18 @@ import React, { Component } from 'react';
 import Info from './Info';
 
 class App extends Component {
+  state = {
+    info: [
+      { name: 'Shahadat', age: 23, dis: 'Noakhali', id: 1 },
+      { name: 'Jahid', age: 22, dis: 'tangail', id: 2 },
+      { name: 'Rashed', age: 21, dis: 'neoga', id: 3 }
+    ]
+  }
   render() {
     return (
       <div className="App">
         <h1>My first React app</h1>
-        <Info name="Shahadat" age="23" dis="Noakhali" />
-        <Info name="Rasl" age="20" dis="Noakhali" />
+        <Info info={this.state.info}/>
       </div>
     );
   }
