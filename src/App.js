@@ -6,7 +6,7 @@ class App extends Component {
     info: [
       { name: 'Shahadat', age: 23, dis: 'Noakhali', id: 1 },
       { name: 'Jahid', age: 22, dis: 'tangail', id: 2 },
-      { name: 'Rashed', age: 21, dis: 'neoga', id: 3 }
+      { name: 'Rashed', age: 19, dis: 'neoga', id: 3 }
     ]
   }
   render() {
