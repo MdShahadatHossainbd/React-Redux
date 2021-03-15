@@ -1,8 +1,5 @@
-import React, { Component } from 'react';
-
-class Info extends Component{
-  render(){
-    const { info } = this.props;
+import React from 'react';
+const Info = ({ info }) => {
     const infoList = info.map(info => {
       return (
         <div className="info">
@@ -11,13 +8,12 @@ class Info extends Component{
           <div>Dis: { info.dis }</div>
         </div>
       )
-    });
+    })
     return (
       <div className="info-list">
         { infoList }
       </div>
     )
   }
-}
 
 export default Info
