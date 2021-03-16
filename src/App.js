@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import AddInfo from './AddInfo';
 import Info from './Info';
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
       <div className="App">
         <h1>My first React app</h1>
         <Info info={this.state.info}/>
+        <AddInfo/>
       </div>
     );
   }
