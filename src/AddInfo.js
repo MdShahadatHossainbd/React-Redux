@@ -13,7 +13,7 @@ class AddInfo extends Component{
         } 
         handleSubmit = (e) => {
             e.preventDefault();
-            console.log(this.state);
+            this.props.addInfo(this.state);
         }
     render(){
         return(
