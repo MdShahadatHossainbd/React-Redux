@@ -1,5 +1,5 @@
 import React from 'react';
-const Info = ({ info }) => {
+const Info = ({ info, deleteInfo }) => {
     //   if (info.age > 20){
     //     return (
     //       <div className="info" key= {info.id}>
@@ -13,11 +13,12 @@ const Info = ({ info }) => {
     //   }
     // });
     const infoList = info.map(info => {
-      return info.age > 20 ? (
+      return (info.age > 20) ? (
 <div className="info" key= {info.id}>
             <div>Name: { info.name }</div>
            <div>Age: { info.age }</div>         
-            <div>Dis: { info.dis }</div>      
+            <div>Dis: { info.dis }</div>
+            <button onClick={() =>{deleteInfo(info.id)}}>Delete Info</button>      
             </div>
       ) : null;
     });
